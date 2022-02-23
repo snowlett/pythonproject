@@ -1,0 +1,22 @@
+print("Good day. Welcome to the Cyan Bank.\n")
+balance = 0
+again = 'y'
+while again == 'y' or again =='Y':
+    choice = input("Please choose from the following options.\n1. Get balance information.\n2. Deposit.") 
+    choice = int(choice)
+    if choice == 1:
+        print("This is your current balance $", balance)
+    if choice == 2:
+        deposit = float(input("How much would you like to deposit today?\n"))
+        if balance == 0 and deposit < 100.00:
+            print("Accounts with $0.00 require a mininum deposit of $100.00. Please try again.")
+        else:
+            print("Your previous balance was $", balance,)
+            print("$", deposit)
+            print("Your new balance is $", balance)
+        another = input("\nWould you like to deposit an additional amount?")
+
+    again = input("Would you like to perform another transaction?")
+    if again == 'n' or again == 'N':
+        print("Have a good day")
+        break
